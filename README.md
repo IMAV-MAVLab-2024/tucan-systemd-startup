@@ -29,5 +29,5 @@ sudo systemctl enable micro-xrce-dds-agent.service
 
 5. Start the service manually (optional):
 ```sh
-sudo systemctl start micro-xrce-dds-agent.service.
+sudo systemctl start micro-xrce-dds-agent.service
 ```
