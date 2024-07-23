@@ -1,0 +1,13 @@
+[Unit]
+Description=Micro XRCE-DDS Agent
+After=network.target
+After=systemd-user-sessions.service
+After=network-online.target
+
+[Service]
+ExecStart=/home/imav2024/tucan-systemd-startup/startup_script.sh
+Restart=on-failure
+User=imav2024
+
+[Install]
+WantedBy=multi-user.target
