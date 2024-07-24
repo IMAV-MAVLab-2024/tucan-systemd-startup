@@ -7,12 +7,14 @@ Very simple systemd service to run the Micro-xrce-dds agent needed for interfaci
 
 1. Ensure the script is executable:
 ```sh
-chmod u+x /home/imav2024/tucan-systemd-startup/startup_script.sh
+chmod u+x /home/imav2024/tucan-systemd-startup/mavlink_router.sh
+chmod u+x /home/imav2024/tucan-systemd-startup/micro_xrce.sh
 ```
 
 2. Copy the service file to the coorect directory:
 ```sh
 sudo cp micro-xrce-dds-agent.service /etc/systemd/system/micro-xrce-dds-agent.service
+sudo cp micro-xrce-dds-agent.service /etc/systemd/system/mavlink-router.service
 ```
 
 3. Reload the systemd manager configuration:
@@ -21,19 +23,22 @@ sudo systemctl daemon-reload
 ```
 
 
-4. Enable the service to start on boot:
+4. Enable the services to start on boot:
 ```sh
 sudo systemctl enable micro-xrce-dds-agent.service
+sudo systemctl enable mavlink-router.service
 ```
 
 
-5. Start the service manually (optional):
+5. Start the services manually (optional):
 ```sh
 sudo systemctl start micro-xrce-dds-agent.service
+sudo systemctl start mavlink-router.service
 ```
 
 
 ## Set system wide ROS_DOMAIN_ID to prevent clashes
+
 1. Edit the following file:
 ```sh
 sudo nano /etc/environment
