@@ -1,0 +1,3 @@
+#! /bin/sh
+
+mavlink-router

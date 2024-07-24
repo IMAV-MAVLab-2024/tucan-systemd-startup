@@ -26,3 +26,15 @@ sudo systemctl daemon-reload
 ```sh
 sudo systemctl start micro-xrce-dds-agent.service.
 ```
+
+
+## Set system wide ROS_DOMAIN_ID to prevent clashes
+1. Edit the following file:
+```sh
+sudo nano /etc/environment
+```
+2. Add this line to the file:
+```sh
+ROS_DOMAIN_ID=74
+```
+
