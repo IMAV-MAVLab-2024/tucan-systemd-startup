@@ -14,7 +14,7 @@ chmod u+x /home/imav2024/tucan-systemd-startup/micro_xrce.sh
 2. Copy the service file to the coorect directory:
 ```sh
 sudo cp micro-xrce-dds-agent.service /etc/systemd/system/micro-xrce-dds-agent.service
-sudo cp micro-xrce-dds-agent.service /etc/systemd/system/mavlink-router.service
+sudo cp mavlink-router.service /etc/systemd/system/mavlink-router.service
 ```
 
 3. Reload the systemd manager configuration:
