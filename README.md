@@ -7,14 +7,12 @@ Very simple systemd service to run the Micro-xrce-dds agent needed for interfaci
 
 1. Ensure the script is executable:
 ```sh
-chmod u+x /path/to/spark/sbin/start-all.sh
+chmod u+x /home/imav2024/tucan-systemd-startup/startup_script.sh
 ```
 
 2. Copy the service file to the coorect directory:
-
-
 ```sh
-sudo cp /etc/systemd/system/micro-xrce-dds-agent.service
+sudo cp micro-xrce-dds-agent.service /etc/systemd/system/micro-xrce-dds-agent.service
 ```
 
 3. Reload the systemd manager configuration:
@@ -22,9 +20,16 @@ sudo cp /etc/systemd/system/micro-xrce-dds-agent.service
 sudo systemctl daemon-reload
 ```
 
-4. Start the service manually (optional):
+
+4. Enable the service to start on boot:
 ```sh
-sudo systemctl start micro-xrce-dds-agent.service.
+sudo systemctl enable micro-xrce-dds-agent.service
+```
+
+
+5. Start the service manually (optional):
+```sh
+sudo systemctl start micro-xrce-dds-agent.service
 ```
 
 
