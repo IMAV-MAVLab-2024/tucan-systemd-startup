@@ -1,3 +1,3 @@
 #! /bin/sh
 
-mavlink-router
+mavlink-routerd
