@@ -5,9 +5,9 @@ After=systemd-user-sessions.service
 After=network-online.target
 
 [Service]
-ExecStart=/home/imav2024/tucan-systemd-startup/mavlink_router.sh
+ExecStart=/home/orangepi/tucan-systemd-startup/mavlink_router.sh
 Restart=on-failure
-User=imav2024
+User=orangepi
 
 [Install]
 WantedBy=multi-user.target
