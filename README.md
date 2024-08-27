@@ -48,3 +48,11 @@ sudo nano /etc/environment
 ROS_DOMAIN_ID=74
 ```
 
+## Some comments
+For some reason the serial port may change, to fix this check which serial ports are available
+```
+ls /dev/ttyS*
+```
+You can try the different options if it does not work with the default set in the <micro_xrce.sh> file. In this file you can also set the baud rate, which should correspond to the FCU's baud rate on TELEM2/TEL2 (921600 by default).
+
+Similarly, the baud rate of the mavlink router should be set in the GPS1 parameter.
