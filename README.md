@@ -9,14 +9,14 @@ Very simple systemd service to run the Micro-xrce-dds agent needed for interfaci
 ```sh
 chmod u+x ~/tucan-systemd-startup/mavlink_router.sh
 chmod u+x ~/tucan-systemd-startup/micro_xrce.sh
-chmod u+x ~/tucan-systemd-startup/zenoh_bridge.sh
+chmod u+x ~/tucan-systemd-startup/wifi_ap.sh
 ```
 
 2. Copy the service file to the coorect directory:
 ```sh
 sudo cp micro-xrce-dds-agent.service /etc/systemd/system/micro-xrce-dds-agent.service
 sudo cp mavlink-router.service /etc/systemd/system/mavlink-router.service
-sudo cp zenoh-bridge.service /etc/systemd/system/zenoh-bridge.service
+sudo cp wifi-ap.service /etc/systemd/system/wifi-ap.service
 ```
 
 3. Reload the systemd manager configuration:
@@ -29,7 +29,7 @@ sudo systemctl daemon-reload
 ```sh
 sudo systemctl enable micro-xrce-dds-agent.service
 sudo systemctl enable mavlink-router.service
-sudo systemctl enable zenoh-bridge.service
+sudo systemctl enable wifi-ap.service
 ```
 
 
@@ -37,7 +37,7 @@ sudo systemctl enable zenoh-bridge.service
 ```sh
 sudo systemctl start micro-xrce-dds-agent.service
 sudo systemctl start mavlink-router.service
-sudo systemctl start zenoh-bridge.service
+sudo systemctl start wifi-ap.service
 ```
 
 
