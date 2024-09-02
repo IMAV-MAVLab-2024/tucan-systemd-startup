@@ -3,12 +3,12 @@ Very simple systemd service to run the Micro-xrce-dds agent needed for interfaci
 
 ## Installation
 
-0. Ensure that this Repository was cloned in the home directory of the imav2024 user.
+0. Ensure that this Repository was cloned in the home directory of the orangepi user.
 
 1. Ensure the script is executable:
 ```sh
-chmod u+x /home/imav2024/tucan-systemd-startup/mavlink_router.sh
-chmod u+x /home/imav2024/tucan-systemd-startup/micro_xrce.sh
+chmod u+x ~/tucan-systemd-startup/mavlink_router.sh
+chmod u+x ~/tucan-systemd-startup/micro_xrce.sh
 ```
 
 2. Copy the service file to the coorect directory:
