@@ -1,13 +1,13 @@
 [Unit]
-Description=Start wifi ap
+Description=Zenoh DDS Bridge
 After=network.target
 After=systemd-user-sessions.service
 After=network-online.target
 
 [Service]
-ExecStart=/home/orangepi/tucan-systemd-startup/wifi_ap.sh
+ExecStart=/home/orangepi/tucan-systemd-startup/zenoh_bridge.sh
 Restart=on-failure
-User=root
+User=orangepi
 
 [Install]
 WantedBy=multi-user.target
