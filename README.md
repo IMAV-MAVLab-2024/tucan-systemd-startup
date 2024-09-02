@@ -16,7 +16,7 @@ chmod u+x ~/tucan-systemd-startup/zenoh_bridge.sh
 ```sh
 sudo cp micro-xrce-dds-agent.service /etc/systemd/system/micro-xrce-dds-agent.service
 sudo cp mavlink-router.service /etc/systemd/system/mavlink-router.service
-sudo cp zenoh_bridge.service /etc/systemd/system/zenoh-bridge.service
+sudo cp zenoh-bridge.service /etc/systemd/system/zenoh-bridge.service
 ```
 
 3. Reload the systemd manager configuration:
