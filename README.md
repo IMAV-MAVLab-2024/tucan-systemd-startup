@@ -9,12 +9,14 @@ Very simple systemd service to run the Micro-xrce-dds agent needed for interfaci
 ```sh
 chmod u+x ~/tucan-systemd-startup/mavlink_router.sh
 chmod u+x ~/tucan-systemd-startup/micro_xrce.sh
+chmod u+x ~/tucan-systemd-startup/zenoh_bridge.sh
 ```
 
 2. Copy the service file to the coorect directory:
 ```sh
 sudo cp micro-xrce-dds-agent.service /etc/systemd/system/micro-xrce-dds-agent.service
 sudo cp mavlink-router.service /etc/systemd/system/mavlink-router.service
+sudo cp zenoh_bridge-router.service /etc/systemd/system/zenoh-bridge.service
 ```
 
 3. Reload the systemd manager configuration:
@@ -27,13 +29,15 @@ sudo systemctl daemon-reload
 ```sh
 sudo systemctl enable micro-xrce-dds-agent.service
 sudo systemctl enable mavlink-router.service
+sudo systemctl enable zenoh-bridge.service
 ```
 
 
-5. Start the services manually (optional):
+5. Start the services manually (optional, avoid restarting):
 ```sh
 sudo systemctl start micro-xrce-dds-agent.service
 sudo systemctl start mavlink-router.service
+sudo systemctl start zenoh-bridge.service
 ```
 
 
@@ -43,6 +47,7 @@ sudo systemctl start mavlink-router.service
 ```sh
 sudo nano /etc/environment
 ```
+
 2. Add this line to the file:
 ```sh
 ROS_DOMAIN_ID=74
