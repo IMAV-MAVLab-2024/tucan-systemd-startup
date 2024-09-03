@@ -5,6 +5,7 @@ After=systemd-user-sessions.service
 After=network-online.target
 
 [Service]
+ExecStartPre=/bin/sleep 15
 ExecStart=/home/orangepi/tucan-systemd-startup/zenoh_bridge.sh
 Restart=on-failure
 User=orangepi
