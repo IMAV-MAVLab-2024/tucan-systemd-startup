@@ -1,3 +1,5 @@
 #! /bin/sh
 
-zenoh-bridge-ros2dds
+source /opt/ros/humble/setup.bash
+
+ROS_DOMAIN_ID=74 zenoh-bridge-ros2dds
