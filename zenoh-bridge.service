@@ -3,6 +3,7 @@ Description=Zenoh DDS Bridge
 After=network.target
 After=systemd-user-sessions.service
 After=network-online.target
+Wants=network-online.target
 
 [Service]
 ExecStart=/home/orangepi/tucan-systemd-startup/zenoh_bridge.sh
