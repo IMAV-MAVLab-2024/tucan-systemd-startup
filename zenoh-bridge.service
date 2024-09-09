@@ -6,7 +6,7 @@ After=network-online.target
 Wants=network-online.target
 
 [Service]
-ExecStartPre=/bin/sleep 15
+ExecStartPre=/bin/sleep 5
 ExecStart=/home/orangepi/tucan-systemd-startup/zenoh_bridge.sh
 Restart=on-failure
 User=orangepi
